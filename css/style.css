@@ -1,0 +1,214 @@
+/* 1. Importação das Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:ital,wght@0,600;0,800;1,600&display=swap');
+
+/* 2. Variáveis do Design System */
+:root {
+  --fonte-marca: 'Nunito Sans', sans-serif;
+  --fonte-interface: 'Inter', sans-serif;
+
+  --cor-principal-azul: #2878B5;
+  --cor-texto-marinho: #243B53;
+  --cor-apoio-turquesa: #35AFA5;
+  --cor-acao-laranja: #F28C28;
+  --cor-social-verde: #2E9B62;
+  --cor-fundo: #F4F7F9;
+  --cor-fundo-branco: #FFFFFF;
+
+  --espaco-pp: 0.5rem;
+  --espaco-p: 1rem;
+  --espaco-m: 1.5rem;
+  --espaco-g: 2rem;
+}
+
+/* 3. Reset Básico (Remove margens indesejadas) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 4. Estilos Base */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-marinho);
+  font-family: var(--fonte-interface);
+  line-height: 1.6;
+}
+
+h1, h2, h3, legend {
+  font-family: var(--fonte-marca);
+  color: var(--cor-principal-azul);
+  margin-bottom: var(--espaco-p);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 5. Cabeçalho e Navegação */
+header {
+  background-color: var(--cor-principal-azul);
+  padding: var(--espaco-p) var(--espaco-g);
+}
+
+header h1 {
+  color: var(--cor-fundo-branco);
+  margin-bottom: var(--espaco-pp);
+}
+
+header p {
+  color: var(--cor-apoio-turquesa);
+  margin-bottom: var(--espaco-p);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--espaco-m);
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--cor-fundo-branco);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--cor-acao-laranja);
+}
+
+/* 6. Estrutura Principal */
+main {
+  max-width: 1000px;
+  margin: var(--espaco-g) auto;
+  padding: 0 var(--espaco-p);
+}
+
+section, article {
+  background-color: var(--cor-fundo-branco);
+  padding: var(--espaco-g);
+  margin-bottom: var(--espaco-g);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(36, 59, 83, 0.05);
+}
+
+/* 7. Formulário de Cadastro */
+fieldset {
+  border: 2px solid var(--cor-apoio-turquesa);
+  border-radius: 8px;
+  padding: var(--espaco-m);
+  margin-bottom: var(--espaco-m);
+}
+
+legend {
+  padding: 0 var(--espaco-pp);
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--espaco-pp);
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: var(--espaco-pp) var(--espaco-p);
+  margin-bottom: var(--espaco-m);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--fonte-interface);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--cor-principal-azul);
+  box-shadow: 0 0 0 2px rgba(40, 120, 181, 0.2);
+}
+
+button[type="submit"] {
+  background-color: var(--cor-social-verde);
+  color: var(--cor-fundo-branco);
+  border: none;
+  padding: var(--espaco-p) var(--espaco-g);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--cor-principal-azul);
+}
+
+/* 8. Rodapé */
+footer {
+  text-align: center;
+  padding: var(--espaco-m);
+  background-color: var(--cor-texto-marinho);
+  color: var(--cor-fundo-branco);
+}
+
+/* Área de demonstração */
+.area-feedbacks {
+  background: var(--cor-fundo-branco);
+  padding: var(--espaco-g);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(36, 59, 83, 0.05);
+}
+
+/* Badges (Etiquetas) */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: var(--tamanho-legenda);
+  font-weight: bold;
+  font-family: var(--fonte-marca);
+  color: var(--cor-fundo-branco);
+  margin-right: 0.5rem;
+  margin-bottom: var(--espaco-p);
+}
+
+.badge-sucesso { background-color: var(--cor-social-verde); }
+.badge-alerta { background-color: var(--cor-acao-laranja); }
+.badge-info { background-color: var(--cor-acao-roxo); }
+
+/* Caixas de Alerta */
+.alerta {
+  padding: var(--espaco-p);
+  border-radius: 6px;
+  margin-bottom: var(--espaco-p);
+  border-left: 5px solid;
+}
+
+.alerta-sucesso {
+  background-color: #E8F5E9; /* Fundo verde bem claro */
+  border-left-color: var(--cor-social-verde);
+  color: var(--cor-texto-marinho);
+}
+
+.alerta-erro {
+  background-color: #FCE8E8; /* Fundo coral bem claro */
+  border-left-color: var(--cor-social-coral);
+  color: var(--cor-texto-marinho);
+}
+
+/* Toast (Notificação Flutuante) */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--cor-principal-azul);
+  color: var(--cor-fundo-branco);
+  padding: var(--espaco-p) var(--espaco-m);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(36, 59, 83, 0.2);
+  border-left: 5px solid var(--cor-acao-amarelo);
+  font-weight: 500;
+  z-index: 1000;
+}

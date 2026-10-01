@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG PARE - Página Inicial</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Global (A Moldura Fixa) -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <!-- Quando clicar, envia o nome do arquivo exato que está na pasta /html -->
+        <li><a href="#" onclick="abrirPagina(event, 'projetos.html')">Nossos Projetos</a></li>
+        <li><a href="#" onclick="abrirPagina(event, 'cadastro.html')">Faça seu Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal (O "Porta-Retratos" onde o JS vai injetar as páginas) -->
+  <main id="app">
+    
+    <h1>Bem-vindo à ONG PARE</h1>
+    <p>Escolha uma opção no menu acima.</p>
+
+    <!-- 1. Apresentação Institucional -->
+    <section id="quem-somos">
+      <h2>Quem Somos</h2>
+      <img src="img/equipe-ong-pare.jpg" alt="Integrantes da ONG PARE reunidos em frente à sede segurando materiais educativos." width="600" height="400">
+      <p>A ONG PARE atua no apoio educacional e social, promovendo oficinas, capacitação e projetos de inclusão para jovens e adultos.</p>
+    </section>
+
+    <!-- 2. Artigo / Notícia -->
+    <article id="noticias">
+      <header>
+        <h2>Título da Notícia Principal</h2>
+        <p><time datetime="2026-03-15">15 de março de 2026</time></p>
+      </header>
+      <section>
+        <h3>Introdução</h3>
+        <p>Sempre há um começo: pequeno, grandioso, inesperado, bagunçado, planejado, rápido, lento, diferente...</p>
+      </section>
+      <section>
+        <h3>Desenvolvimento</h3>
+        <p>Texto do desenvolvimento da notícia...</p>
+      </section>
+      <footer>
+        <p>Autora: Flávia Renata</p>
+      </footer>
+    </article>
+
+    <!-- 3. Dados de Contato -->
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <address>
+        <p>E-mail: <a href="mailto:contato@ongpare.org.br">contato@ongpare.org.br</a></p>
+        <p>Telefone: <a href="tel:+5554999999999">(54) 99999-9999</a></p>
+        <p>Endereço: Rua Principal, 123 - Centro</p>
+      </address>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Global (A Moldura Fixa) -->
+  <footer>
+    <p>&copy; 2026 ONG PARE. Todos os direitos reservados.</p>
+  </footer>
+
+<!-- Biblioteca Externa (SweetAlert2) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <!-- Scripts Modulares -->
+  <script src="js/formulario.js"></script>
+  <script src="js/navegacao.js"></script>
+</body>
+</html>

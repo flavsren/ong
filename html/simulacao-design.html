@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulação - Design System ONG PARE</title>
+  
+  <!-- Importando as fontes Nunito Sans e Inter do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Fontes */
+      --fonte-marca: 'Nunito Sans', sans-serif;
+      --fonte-interface: 'Inter', sans-serif;
+
+      /* Cores Estruturais */
+      --cor-principal-azul: #2878B5;
+      --cor-texto-marinho: #243B53;
+      --cor-apoio-turquesa: #35AFA5;
+
+      /* Cores de Ação */
+      --cor-acao-amarelo: #F2C94C;
+      --cor-acao-laranja: #F28C28;
+      --cor-acao-roxo: #7B61A8;
+
+      /* Cores Sociais */
+      --cor-social-coral: #E76F6F;
+      --cor-social-verde: #2E9B62;
+
+      /* Espaçamentos */
+      --espaco-pp: 0.5rem;
+      --espaco-p: 1rem;
+      --espaco-m: 1.5rem;
+      --espaco-g: 2rem;
+    }
+
+    /* Reset básico e fundo da página */
+    body {
+      margin: 0;
+      background-color: #F4F7F9; /* Fundo neutro bem claro */
+      font-family: var(--fonte-interface);
+      color: var(--cor-texto-marinho);
+      line-height: 1.5;
+    }
+
+    /* Tipografia da Marca */
+    h1, h2, h3 {
+      font-family: var(--fonte-marca);
+      margin-top: 0;
+    }
+
+    /* Cabeçalho - Azul Principal */
+    header {
+      background-color: var(--cor-principal-azul);
+      color: white;
+      padding: var(--espaco-p) var(--espaco-g);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: var(--espaco-g) auto;
+      padding: 0 var(--espaco-p);
+    }
+
+    /* Painel de Boas-vindas - Detalhe Turquesa */
+    .painel-principal {
+      background: white;
+      border-radius: 12px;
+      padding: var(--espaco-g);
+      box-shadow: 0 4px 6px rgba(36, 59, 83, 0.05);
+      border-top: 6px solid var(--cor-apoio-turquesa);
+      margin-bottom: var(--espaco-g);
+    }
+
+    .painel-principal h2 {
+      font-size: 2rem;
+      color: var(--cor-principal-azul);
+    }
+
+    /* Sistema de Gamificação - Verde e Amarelo */
+    .progresso-container {
+      display: flex;
+      align-items: center;
+      gap: var(--espaco-p);
+      margin-top: var(--espaco-m);
+      background: #F8FAFC;
+      padding: var(--espaco-p);
+      border-radius: 8px;
+    }
+
+    .barra-fundo {
+      flex: 1;
+      background: #E2E8F0;
+      height: 16px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .barra-preenchida {
+      background-color: var(--cor-social-verde);
+      width: 65%;
+      height: 100%;
+    }
+
+    .xp-badge {
+      background-color: var(--cor-acao-amarelo);
+      color: var(--cor-texto-marinho);
+      font-family: var(--fonte-marca);
+      font-weight: 800;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+    }
+
+    /* Grid de Cards Menores */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--espaco-m);
+    }
+
+    .card {
+      background: white;
+      padding: var(--espaco-m);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(36, 59, 83, 0.05);
+    }
+
+    /* Aplicação das Cores de Ação e Sociais */
+    .card.desafio { border-left: 5px solid var(--cor-acao-laranja); }
+    .card.comunidade { border-left: 5px solid var(--cor-social-coral); }
+    .card.conquista { border-left: 5px solid var(--cor-acao-roxo); }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: var(--espaco-pp);
+    }
+
+    .tag-roxo { color: var(--cor-acao-roxo); font-weight: bold; }
+
+    /* Botões */
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: var(--fonte-interface);
+      margin-top: var(--espaco-p);
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover { opacity: 0.8; }
+    .btn-laranja { background-color: var(--cor-acao-laranja); color: white; }
+    .btn-coral { background-color: var(--cor-social-coral); color: white; }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ONG PARE</h1>
+    <div style="font-family: var(--fonte-interface);">Perfil</div>
+  </header>
+
+  <main class="container">
+    
+    <section class="painel-principal">
+      <h2>Olá, Professora Flávia Renata!</h2>
+      <p>Bem-vinda de volta ao painel educacional. Veja seu progresso nas capacitações desta semana.</p>
+      
+      <div class="progresso-container">
+        <span style="font-weight: 500;">Nível 4: Facilitadora</span>
+        <div class="barra-fundo">
+          <div class="barra-preenchida"></div>
+        </div>
+        <div class="xp-badge">1250 XP</div>
+      </div>
+    </section>
+
+    <div class="grid-cards">
+      
+      <article class="card desafio">
+        <h3 style="color: var(--cor-acao-laranja);">Missão Pendente</h3>
+        <p>Complete a oficina de Metodologias Ativas para desbloquear um novo módulo.</p>
+        <a href="#" class="btn btn-laranja">Iniciar Desafio</a>
+      </article>
+
+      <article class="card comunidade">
+        <h3 style="color: var(--cor-social-coral);">Fórum Social</h3>
+        <p>3 novos professores responderam ao seu tópico sobre projetos de Ciências.</p>
+        <a href="#" class="btn btn-coral">Ver Comunidade</a>
+      </article>
+
+      <article class="card conquista">
+        <h3 style="color: var(--cor-acao-roxo);">Últimas Conquistas</h3>
+        <p>Você ganhou a insígnia <span class="tag-roxo">Mestre da Biologia</span> por concluir o mapeamento genético.</p>
+      </article>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
