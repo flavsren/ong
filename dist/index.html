@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONG PARE - Página Inicial</title>
+  <title>ONG PARE - Página Inicial</title>
+
   <script type="module" crossorigin src="/assets/index-CDheasds.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-9mCMGEcD.css">
 </head>
@@ -14,9 +15,9 @@
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
-        <!-- Quando clicar, envia o nome do arquivo exato que está na pasta /html -->
-        <li><a href="#" onclick="abrirPagina(event, 'projetos.html')">Nossos Projetos</a></li>
-        <li><a href="#" onclick="abrirPagina(event, 'cadastro.html')">Faça seu Cadastro</a></li>
+        <!-- O onclick foi removido e substituímos por ids -->
+        <li><a href="#" id="link-projetos">Nossos Projetos</a></li>
+        <li><a href="#" id="link-cadastro">Faça seu Cadastro</a></li>
       </ul>
     </nav>
   </header>
@@ -73,6 +74,8 @@
 <!-- Biblioteca Externa (SweetAlert2) -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
-  <!-- Scripts Modulares -->
+  <!-- Scripts Modulares -->
+
+
 </body>
 </html>
