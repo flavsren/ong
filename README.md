@@ -22,4 +22,4 @@ Acesse a aplicação no ar: **[https://ongpare.vercel.app](https://ongpare.verce
 
 1. Clone o repositório para a sua máquina:
    ```bash
-   git clone [https://github.com/flavsren/ong.git](https://github.com/flavsren/ong.git)
+   git clone [https://github.com/flavsren/ong.git]
