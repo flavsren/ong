@@ -19,3 +19,10 @@ async function abrirPagina(evento, nomeDoArquivo) {
     areaPrincipal.innerHTML = '<h2>Erro ao carregar.</h2><p>Conteúdo indisponível.</p>';
   }
 }
+document.getElementById('link-projetos').addEventListener('click', function(event) {
+  abrirPagina(event, 'projetos.html');
+});
+
+document.getElementById('link-cadastro').addEventListener('click', function(event) {
+  abrirPagina(event, 'cadastro.html');
+});
